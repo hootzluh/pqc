@@ -1,0 +1,9 @@
+pqvm KAT runner starting (ML-KEM only)...
+SKIP mlkem512: /Users/devpup/Desktop/pqc/pqkat/NIST-ml-kem-fips203/KAT/mlkem512/PQCkemKAT_1632.rsp not found
+SKIP mlkem768: /Users/devpup/Desktop/pqc/pqkat/NIST-ml-kem-fips203/KAT/mlkem768/PQCkemKAT_2400.rsp not found
+SKIP mlkem1024: /Users/devpup/Desktop/pqc/pqkat/NIST-ml-kem-fips203/KAT/mlkem1024/PQCkemKAT_3168.rsp not found
+{
+  "mlkem_passed": [],
+  "mlkem_failed": [],
+  "timestamp": "20250925-035509"
+}

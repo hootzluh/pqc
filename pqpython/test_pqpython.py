@@ -5,6 +5,8 @@ Test script for pqpython - NIST PQC algorithms
 
 import pqpython
 import time
+import os
+from pathlib import Path
 
 
 def test_kem_algorithm(alg, name):
@@ -107,6 +109,82 @@ def benchmark_algorithm(alg, name, operation, iterations=100):
     return avg_time
 
 
+def validate_kat_algorithms():
+    """Validate algorithms against NIST KAT vectors"""
+    print("\nNIST KAT Validation:")
+    print("=" * 25)
+
+    # Find KAT directory
+    kat_dir = None
+    current_dir = Path(__file__).parent
+    possible_dirs = [
+        current_dir.parent.parent / "pqkat",
+        Path("/Users/devpup/Desktop/pqc/pqkat"),
+    ]
+
+    for dir_path in possible_dirs:
+        if dir_path.exists():
+            kat_dir = str(dir_path)
+            break
+
+    if not kat_dir:
+        print("  ✗ KAT directory not found")
+        return False
+
+    print(f"  Using KAT directory: {kat_dir}")
+
+    validator = pqpython.KATValidator(kat_dir)
+
+    # KEM algorithms to validate
+    kem_algorithms = [
+        ("ml-kem-512", pqpython.MLKEM512),
+        ("ml-kem-768", pqpython.MLKEM768),
+        ("ml-kem-1024", pqpython.MLKEM1024),
+        ("hqc-kem-128", pqpython.HQCKEM128),
+        ("hqc-kem-192", pqpython.HQCKEM192),
+        ("hqc-kem-256", pqpython.HQCKEM256),
+    ]
+
+    # Signature algorithms to validate
+    sig_algorithms = [
+        ("ml-dsa-44", pqpython.MLDSA44),
+        ("ml-dsa-65", pqpython.MLDSA65),
+        ("ml-dsa-87", pqpython.MLDSA87),
+    ]
+
+    all_passed = True
+
+    # Validate KEM algorithms
+    print("\nKEM Algorithm KAT Validation:")
+    print("-" * 30)
+    for alg_name, alg_impl in kem_algorithms:
+        result = validator.validate_kem_algorithm(alg_name, alg_impl)
+        if result['total'] > 0:
+            passed_rate = result['passed'] / result['total'] * 100
+            print(f"  {alg_name}: {result['passed']}/{result['total']} passed ({passed_rate:.1f}%)")
+            if result['failed'] > 0:
+                all_passed = False
+        else:
+            print(f"  {alg_name}: No KAT tests available")
+            all_passed = False
+
+    # Validate signature algorithms
+    print("\nSignature Algorithm KAT Validation:")
+    print("-" * 35)
+    for alg_name, alg_impl in sig_algorithms:
+        result = validator.validate_signature_algorithm(alg_name, alg_impl)
+        if result['total'] > 0:
+            passed_rate = result['passed'] / result['total'] * 100
+            print(f"  {alg_name}: {result['passed']}/{result['total']} passed ({passed_rate:.1f}%)")
+            if result['failed'] > 0:
+                all_passed = False
+        else:
+            print(f"  {alg_name}: No KAT tests available")
+            all_passed = False
+
+    return all_passed
+
+
 def main():
     """Main test function"""
     print("pqpython Test Suite")
@@ -147,7 +225,12 @@ def main():
     print(f"Signature tests passed: {sum(sig_results)}/{len(sig_results)}")
     print(f"Total: {passed_tests}/{total_tests} tests passed")
 
-    if passed_tests == total_tests:
+    basic_tests_passed = passed_tests == total_tests
+
+    # KAT Validation
+    kat_passed = validate_kat_algorithms()
+
+    if basic_tests_passed and kat_passed:
         print("✓ All tests passed!")
     else:
         print("✗ Some tests failed!")

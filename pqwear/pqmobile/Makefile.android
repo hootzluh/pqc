@@ -1,0 +1,105 @@
+# Android Cross-compilation Makefile for PQMobile
+
+# Target architecture
+TARGET ?= arm64-v8a
+
+# Android NDK setup
+ANDROID_NDK_HOME ?= $(HOME)/Android/Sdk/ndk/21.4.7075529
+TOOLCHAIN := $(ANDROID_NDK_HOME)/toolchains/llvm/prebuilt/darwin-x86_64
+
+# Architecture-specific settings
+ifeq ($(TARGET),arm64-v8a)
+	ARCH := aarch64-linux-android
+	API_LEVEL := 21
+else ifeq ($(TARGET),armeabi-v7a)
+	ARCH := armv7a-linux-androideabi
+	API_LEVEL := 21
+endif
+
+# Compiler and flags
+CC := $(TOOLCHAIN)/bin/$(ARCH)$(API_LEVEL)-clang
+CFLAGS := -O3 -Wall -Wextra -std=c99 -I. -Icommon
+AR := $(TOOLCHAIN)/bin/$(ARCH)$(API_LEVEL)-ar
+ARFLAGS := -r
+
+# Source directories (relative to pqmobile root)
+
+# Output libraries
+LIBS := libml-kem-512.a libml-kem-768.a libml-kem-1024.a
+LIBS += libml-dsa-44.a libml-dsa-65.a libml-dsa-87.a
+LIBS += libfn-dsa-512.a libfn-dsa-1024.a
+LIBS += libhqc-128.a libhqc-192.a libhqc-256.a
+
+.PHONY: all clean
+
+all: $(LIBS)
+
+# ML-KEM builds
+libml-kem-512.a:
+	@echo "Building ML-KEM-512 for Android $(TARGET)..."
+	@cd ml-kem-512/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
+	@mv ml-kem-512/clean/$@ .
+
+libml-kem-768.a:
+	@echo "Building ML-KEM-768 for Android $(TARGET)..."
+	@cd ml-kem-768/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
+	@mv ml-kem-768/clean/$@ .
+
+libml-kem-1024.a:
+	@echo "Building ML-KEM-1024 for Android $(TARGET)..."
+	@cd ml-kem-1024/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
+	@mv ml-kem-1024/clean/$@ .
+
+# ML-DSA builds
+libml-dsa-44.a:
+	@echo "Building ML-DSA-44 for Android $(TARGET)..."
+	@cd ml-dsa-44/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
+	@mv ml-dsa-44/clean/$@ .
+
+libml-dsa-65.a:
+	@echo "Building ML-DSA-65 for Android $(TARGET)..."
+	@cd ml-dsa-65/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
+	@mv ml-dsa-65/clean/$@ .
+
+libml-dsa-87.a:
+	@echo "Building ML-DSA-87 for Android $(TARGET)..."
+	@cd ml-dsa-87/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
+	@mv ml-dsa-87/clean/$@ .
+
+# FN-DSA builds
+libfn-dsa-512.a:
+	@echo "Building FN-DSA-512 for Android $(TARGET)..."
+	@cd falcon-512/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
+	@mv falcon-512/clean/$@ .
+
+libfn-dsa-1024.a:
+	@echo "Building FN-DSA-1024 for Android $(TARGET)..."
+	@cd falcon-1024/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
+	@mv falcon-1024/clean/$@ .
+
+# HQC builds
+libhqc-128.a:
+	@echo "Building HQC-128 for Android $(TARGET)..."
+	@cd hqc-128/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
+	@mv hqc-128/clean/$@ .
+
+libhqc-192.a:
+	@echo "Building HQC-192 for Android $(TARGET)..."
+	@cd hqc-192/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
+	@mv hqc-192/clean/$@ .
+
+libhqc-256.a:
+	@echo "Building HQC-256 for Android $(TARGET)..."
+	@cd hqc-256/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
+	@mv hqc-256/clean/$@ .
+
+clean:
+	@echo "Cleaning Android build artifacts..."
+	@find . -name "*.a" -delete
+	@find . -name "*.o" -delete
+	@for dir in ml-kem-*/clean ml-dsa-*/clean falcon-*/clean hqc-*/clean; do \
+		if [ -d "$$dir" ]; then \
+			cd $$dir && make clean 2>/dev/null || true; \
+			cd - >/dev/null; \
+		fi; \
+	done

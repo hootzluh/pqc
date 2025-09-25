@@ -1,54 +1,35 @@
 #!/bin/bash
 
 # PQWear Build Script
-# Cross-compiles PQC algorithms for wearable devices
+# Builds PQC algorithms for wearable devices with size optimizations
 
 set -e
 
 echo "PQWear Build Script"
 echo "==================="
 
-# Check if required tools are available
-command -v cargo >/dev/null 2>&1 || { echo "Error: cargo not found. Install Rust."; exit 1; }
+echo "Building for wearable platforms with size optimizations..."
 
-echo "Building for wearable platforms..."
+# Build all algorithms with wearable optimizations (size-optimized)
+for algo_dir in ml-kem-*/clean ml-dsa-*/clean falcon-*/clean hqc-*/clean; do
+    if [ -d "$algo_dir" ]; then
+        echo "Building $algo_dir for wearables..."
+        cd "$algo_dir"
 
-cd pqcrypto
+        # Use size optimization for wearables
+        make clean && make EXTRAFLAGS="-Os"
 
-# Build for watchOS (wearable iOS)
-echo "Building for watchOS..."
-if cargo build --target aarch64-apple-ios --release --features "wearable-optimized"; then
-    echo "✓ watchOS ARM64 build successful"
-    cp target/aarch64-apple-ios/release/libpqcrypto.a ../watchos-arm64/
-else
-    echo "⚠ watchOS ARM64 build failed (may require Xcode)"
-fi
+        # Copy to wearable platform directories
+        cp *.a ../../../watchos-arm64/ 2>/dev/null || true
+        cp *.a ../../../wearos-arm64/ 2>/dev/null || true
+        cp *.a ../../../wearos-armv7/ 2>/dev/null || true
 
-# Build for Wear OS (wearable Android)
-echo "Building for Wear OS..."
-if command -v ndk-build >/dev/null 2>&1; then
-    # Use size-optimized builds for wearables
-    export RUSTFLAGS="-C opt-level=s -C panic=abort -C codegen-units=1"
-
-    if cargo build --target aarch64-linux-android --release; then
-        echo "✓ Wear OS ARM64 build successful"
-        cp target/aarch64-linux-android/release/libpqcrypto.a ../wearos-arm64/
-    else
-        echo "⚠ Wear OS ARM64 build failed"
+        cd ../../..
     fi
-
-    if cargo build --target armv7-linux-androideabi --release; then
-        echo "✓ Wear OS ARMv7 build successful"
-        cp target/armv7-linux-androideabi/release/libpqcrypto.a ../wearos-armv7/
-    else
-        echo "⚠ Wear OS ARMv7 build failed"
-    fi
-else
-    echo "⚠ Android NDK not found. Install Android NDK for Wear OS builds."
-fi
-
-cd ..
+done
 
 echo "Build completed!"
-echo "Check the platform-specific directories for compiled libraries."
-echo "Note: Full iOS/Android builds may require additional SDK setup."
+echo "Wearable-optimized libraries are available in:"
+echo "  - watchos-arm64/ (Apple Watch)"
+echo "  - wearos-arm64/ (Android Wear 64-bit)"
+echo "  - wearos-armv7/ (Android Wear 32-bit)"

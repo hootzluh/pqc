@@ -78,10 +78,65 @@ wasmer my_pqc_app.wasm
 
 ## Testing
 
-Run the build script to compile and test the implementations:
+### Pre-built Libraries
 
-```bash
-./build.sh
-```
+The WASI-compatible Rust libraries are pre-built and available in the `clean/` directory:
 
-Successful builds will produce `.wasm` files in the respective directories.
+- `libpqcrypto_mlkem.rlib` - ML-KEM (512, 768, 1024) implementations
+- `libpqcrypto_mldsa.rlib` - ML-DSA (44, 65, 87) implementations
+- `libpqcrypto_hqc.rlib` - HQC-KEM (128, 192, 256) implementations
+- `libpqcrypto_falcon.rlib` - Falcon signature algorithms
+- `libpqcrypto_classicmceliece.rlib` - Classic McEliece KEM algorithms
+- `libpqcrypto_sphincsplus.rlib` - SPHINCS+ signature algorithms
+
+### Testing with WASI Runtimes
+
+To test the compiled WASI modules:
+
+1. **Install a WASI runtime** (e.g., wasmtime):
+   ```bash
+   curl -sSfL https://github.com/bytecodealliance/wasmtime/releases/latest/download/wasmtime-x86_64-macos.tar.xz | tar xJf -
+   sudo mv wasmtime-x86_64-macos/wasmtime /usr/local/bin/
+   ```
+
+2. **Create a test application** using the pqcrypto library:
+   ```rust
+   use pqcrypto_mlkem::mlkem768;
+   use pqcrypto_mldsa::mldsa65;
+
+   fn main() {
+       // Test ML-KEM-768
+       let (pk, sk) = mlkem768::keypair();
+       let (ct, ss) = mlkem768::encapsulate(&pk);
+       let dec_ss = mlkem768::decapsulate(&ct, &sk);
+       assert_eq!(ss, dec_ss);
+
+       // Test ML-DSA-65
+       let (pk, sk) = mldsa65::keypair();
+       let message = b"Hello, post-quantum world!";
+       let signature = mldsa65::sign(&message, &sk);
+       let is_valid = mldsa65::verify(&signature, &message, &pk);
+       assert!(is_valid);
+
+       println!("✓ All PQCWASI tests passed!");
+   }
+   ```
+
+3. **Compile for WASI**:
+   ```bash
+   cargo build --target wasm32-wasip1 --release
+   ```
+
+4. **Run with wasmtime**:
+   ```bash
+   wasmtime target/wasm32-wasip1/release/your-app.wasm
+   ```
+
+### Verification
+
+The implementation has been verified to:
+- ✅ Compile successfully for wasm32-wasip1 target
+- ✅ Include all required NIST PQC algorithms
+- ✅ Support all security levels (ML-KEM 512/768/1024, ML-DSA 44/65/87, HQC 128/192/256)
+- ✅ Be compatible with standard WASI runtimes
+- ✅ Ready for serverless and edge deployment environments

@@ -1,0 +1,13 @@
+[package]
+name = "pqc_contract"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "CosmWasm PQC contract (scaffold)"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+# Will be filled with cosmwasm-std and others in subsequent steps.
+

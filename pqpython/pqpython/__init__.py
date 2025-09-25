@@ -9,6 +9,7 @@ __version__ = "0.1.0"
 
 from .kem import *
 from .sign import *
+from .kat import KATValidator
 
 __all__ = [
     # KEM algorithms
@@ -20,4 +21,7 @@ __all__ = [
     # Signature algorithms
     'MLDSA44', 'MLDSA65', 'MLDSA87',
     'FNDSA512', 'FNDSA1024',
+
+    # KAT validation
+    'KATValidator',
 ]

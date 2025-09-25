@@ -30,6 +30,16 @@ serialization = ["serde", "serde-big-array"]
 cc = { version = "1.0", features = ["parallel"] }
 glob = "0.3.0"
 
+# Classic McEliece requires a large stack for tests
+[package.metadata.cargo-udeps.ignore]
+unused = ["RUST_MIN_STACK"]
+
+[package.metadata.cargo-test-optimize]
+required-features = []
+
+[package.metadata.cargo-test-optimize.package.pqcrypto-classicmceliece]
+env = { RUST_MIN_STACK = "800000000" }
+
 [badges]
 travis-ci = { repository = "rustpq/pqcrypto", branch = "master" }
 maintenance = { status = "actively-developed" }

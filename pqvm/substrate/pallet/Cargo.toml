@@ -1,0 +1,19 @@
+[package]
+name = "pqc_pallet"
+version = "0.1.0"
+edition = "2021"
+authors = ["Augment Agent <dev>"]
+license = "MIT OR Apache-2.0"
+description = "FRAME pallet exposing PQC host-call interface (scaffold)"
+
+[lib]
+name = "pqc_pallet"
+path = "src/lib.rs"
+crate-type = ["rlib"]
+
+[dependencies]
+# NOTE: Full FRAME dependencies to be added in subsequent steps.
+
+[features]
+default = []
+

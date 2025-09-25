@@ -1,0 +1,9 @@
+[package]
+name = "pqcwasi-test"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pqcrypto-mlkem = { path = "archive/pqcrypto/pqcrypto-mlkem" }
+pqcrypto-mldsa = { path = "archive/pqcrypto/pqcrypto-mldsa" }
+pqcrypto-hqc = { path = "archive/pqcrypto/pqcrypto-hqc" }

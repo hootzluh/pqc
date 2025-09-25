@@ -1,0 +1,10 @@
+[workspace]
+members = [
+    "substrate/pallet",
+    "cosmwasm/contracts/pqc_contract",
+    "evm/precompiles",
+    "move/move_bindings",
+    "tools/mlkem_host_cli"
+]
+resolver = "2"
+

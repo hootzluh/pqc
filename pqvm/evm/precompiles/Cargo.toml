@@ -1,0 +1,16 @@
+[package]
+name = "pqc_evm_precompiles"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[lib]
+name = "pqc_evm_precompiles"
+path = "src/lib.rs"
+crate-type = ["rlib", "cdylib", "staticlib"]
+
+[dependencies]
+
+[features]
+default = []
+

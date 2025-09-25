@@ -18,7 +18,7 @@ OBJECTS = aes256ctr.o benes.o bm.o controlbits.o crypto_int16.o crypto_int32.o \
 
 CFLAGS  = -O3 -std=c99 -Wall -Wextra -pedantic -Werror -Wpedantic \
 	  -Wredundant-decls -Wcast-align -Wmissing-prototypes \
-	  -I../../../common/ $(EXTRAFLAGS)
+	  -I../../../../common/ $(EXTRAFLAGS)
 
 all: $(LIB)
 

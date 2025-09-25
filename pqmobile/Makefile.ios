@@ -4,6 +4,9 @@
 TARGET ?= arm64
 SYSROOT ?= iphoneos
 
+# Set developer directory for Xcode
+export DEVELOPER_DIR := /Applications/Xcode.app/Contents/Developer
+
 # iOS SDK detection
 ifeq ($(TARGET),arm64)
 	SDKROOT := $(shell xcrun --sdk $(SYSROOT) --show-sdk-path 2>/dev/null)
@@ -15,6 +18,16 @@ else ifeq ($(TARGET),x86_64)
 	CROSS_COMPILE := x86_64-apple-ios
 endif
 
+# Output directory by target arch
+ifeq ($(TARGET),arm64)
+	OUTDIR := ios-arm64
+else ifeq ($(TARGET),x86_64)
+	OUTDIR := ios-x86_64
+else
+	OUTDIR := ios-$(TARGET)
+endif
+
+
 # Check if SDK was found
 ifndef SDKROOT
 $(error iOS SDK not found. Make sure Xcode is installed and xcrun is available.)
@@ -23,80 +36,77 @@ endif
 # Compiler and flags
 CC := clang
 CFLAGS := -arch $(ARCH) -isysroot $(SDKROOT) -miphoneos-version-min=12.0
-CFLAGS += -O3 -Wall -Wextra -std=c99 -I. -Icommon -IAdditional_Implementations/clean/crypto_kem/kyber512
+CFLAGS += -O3 -Wall -Wextra -std=c99 -I./common
 AR := ar
 ARFLAGS := -r
 
-# Source directories (relative to pqmobile root)
+# Source directories (pqnist Reference_Implementation structure)
 
 # Output libraries
 LIBS := libml-kem-512.a libml-kem-768.a libml-kem-1024.a
 LIBS += libml-dsa-44.a libml-dsa-65.a libml-dsa-87.a
-LIBS += libfn-dsa-512.a libfn-dsa-1024.a
 LIBS += libhqc-128.a libhqc-192.a libhqc-256.a
 
 .PHONY: all clean
 
 all: $(LIBS)
 
-# ML-KEM builds
+# ML-KEM builds (using pqnist Reference_Implementation)
 libml-kem-512.a:
 	@echo "Building ML-KEM-512 for iOS $(TARGET)..."
-	@cd ml-kem-512/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
-	@mv ml-kem-512/clean/$@ .
+	@cd Reference_Implementation/crypto_kem/kyber512 && \
+	 $(CC) $(CFLAGS) -c cbd.c fips202.c indcpa.c kem.c ntt.c poly.c polyvec.c reduce.c rng.c verify.c symmetric-shake.c && \
+	 mkdir -p ../../../../$(OUTDIR) && $(AR) -r ../../../../$(OUTDIR)/$@ *.o
 
 libml-kem-768.a:
 	@echo "Building ML-KEM-768 for iOS $(TARGET)..."
-	@cd ml-kem-768/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
-	@mv ml-kem-768/clean/$@ .
+	@cd Reference_Implementation/crypto_kem/kyber768 && \
+	 $(CC) $(CFLAGS) -c cbd.c fips202.c indcpa.c kem.c ntt.c poly.c polyvec.c reduce.c rng.c verify.c symmetric-shake.c && \
+	 mkdir -p ../../../../$(OUTDIR) && $(AR) -r ../../../../$(OUTDIR)/$@ *.o
 
 libml-kem-1024.a:
 	@echo "Building ML-KEM-1024 for iOS $(TARGET)..."
-	@cd ml-kem-1024/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
-	@mv ml-kem-1024/clean/$@ .
+	@cd Reference_Implementation/crypto_kem/kyber1024 && \
+	 $(CC) $(CFLAGS) -c cbd.c fips202.c indcpa.c kem.c ntt.c poly.c polyvec.c reduce.c rng.c verify.c symmetric-shake.c && \
+	 mkdir -p ../../../../$(OUTDIR) && $(AR) -r ../../../../$(OUTDIR)/$@ *.o
 
-# ML-DSA builds
+# ML-DSA builds (using pqnist Reference_Implementation)
 libml-dsa-44.a:
 	@echo "Building ML-DSA-44 for iOS $(TARGET)..."
-	@cd ml-dsa-44/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
-	@mv ml-dsa-44/clean/$@ .
+	@cd Reference_Implementation/crypto_sign/dilithium2 && \
+	 $(CC) $(CFLAGS) -c fips202.c ntt.c packing.c poly.c polyvec.c reduce.c rounding.c sign.c symmetric-shake.c && \
+	 mkdir -p ../../../../$(OUTDIR) && $(AR) -r ../../../../$(OUTDIR)/$@ *.o
 
 libml-dsa-65.a:
 	@echo "Building ML-DSA-65 for iOS $(TARGET)..."
-	@cd ml-dsa-65/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
-	@mv ml-dsa-65/clean/$@ .
+	@cd Reference_Implementation/crypto_sign/dilithium3 && \
+	 $(CC) $(CFLAGS) -c fips202.c ntt.c packing.c poly.c polyvec.c reduce.c rounding.c sign.c symmetric-shake.c && \
+	 mkdir -p ../../../../$(OUTDIR) && $(AR) -r ../../../../$(OUTDIR)/$@ *.o
 
 libml-dsa-87.a:
 	@echo "Building ML-DSA-87 for iOS $(TARGET)..."
-	@cd ml-dsa-87/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
-	@mv ml-dsa-87/clean/$@ .
+	@cd Reference_Implementation/crypto_sign/dilithium5 && \
+	 $(CC) $(CFLAGS) -c fips202.c ntt.c packing.c poly.c polyvec.c reduce.c rounding.c sign.c symmetric-shake.c && \
+	 mkdir -p ../../../../$(OUTDIR) && $(AR) -r ../../../../$(OUTDIR)/$@ *.o
 
-# FN-DSA builds
-libfn-dsa-512.a:
-	@echo "Building FN-DSA-512 for iOS $(TARGET)..."
-	@cd falcon-512/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
-	@mv falcon-512/clean/$@ .
-
-libfn-dsa-1024.a:
-	@echo "Building FN-DSA-1024 for iOS $(TARGET)..."
-	@cd falcon-1024/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
-	@mv falcon-1024/clean/$@ .
-
-# HQC builds
+# HQC builds (using pqnist Reference_Implementation)
 libhqc-128.a:
 	@echo "Building HQC-128 for iOS $(TARGET)..."
-	@cd hqc-128/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
-	@mv hqc-128/clean/$@ .
+	@cd Reference_Implementation/hqc-128 && \
+	 $(CC) $(CFLAGS) -c code.c fft.c gf.c gf2x.c hqc.c kem.c parsing.c reed_muller.c reed_solomon.c shake_ds.c shake_prng.c vector.c && \
+	 mkdir -p ../../$(OUTDIR) && $(AR) -r ../../$(OUTDIR)/$@ *.o
 
 libhqc-192.a:
 	@echo "Building HQC-192 for iOS $(TARGET)..."
-	@cd hqc-192/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
-	@mv hqc-192/clean/$@ .
+	@cd Reference_Implementation/hqc-192 && \
+	 $(CC) $(CFLAGS) -c code.c fft.c gf.c gf2x.c hqc.c kem.c parsing.c reed_muller.c reed_solomon.c shake_ds.c shake_prng.c vector.c && \
+	 mkdir -p ../../$(OUTDIR) && $(AR) -r ../../$(OUTDIR)/$@ *.o
 
 libhqc-256.a:
 	@echo "Building HQC-256 for iOS $(TARGET)..."
-	@cd hqc-256/clean && make CC="$(CC)" CFLAGS="$(CFLAGS)" LIB=$@
-	@mv hqc-256/clean/$@ .
+	@cd Reference_Implementation/hqc-256 && \
+	 $(CC) $(CFLAGS) -c code.c fft.c gf.c gf2x.c hqc.c kem.c parsing.c reed_muller.c reed_solomon.c shake_ds.c shake_prng.c vector.c && \
+	 mkdir -p ../../$(OUTDIR) && $(AR) -r ../../$(OUTDIR)/$@ *.o
 
 clean:
 	@echo "Cleaning iOS build artifacts..."
@@ -108,3 +118,4 @@ clean:
 			cd - >/dev/null; \
 		fi; \
 	done
+
