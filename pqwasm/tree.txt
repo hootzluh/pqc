@@ -1,0 +1,110 @@
+.
+├── addimp
+│   ├── falcon1024_extra.wasm
+│   ├── falcon512_extra.wasm
+│   ├── hqc128_add.wasm
+│   ├── hqc192_add.wasm
+│   └── hqc256_add.wasm
+├── avx2
+│   ├── falcon1024_avx2.wasm
+│   ├── falcon512_avx2.wasm
+│   ├── mldsa44_avx2.wasm
+│   ├── mldsa65_avx2.wasm
+│   ├── mldsa87_avx2.wasm
+│   ├── mlkem1024_avx2.wasm
+│   ├── mlkem512_avx2.wasm
+│   ├── mlkem768_avx2.wasm
+│   ├── slhdsa_haraka_128f_robust.wasm
+│   ├── slhdsa_haraka_128f_simple.wasm
+│   ├── slhdsa_haraka_128s_robust.wasm
+│   ├── slhdsa_haraka_128s_simple.wasm
+│   ├── slhdsa_haraka_192f_robust.wasm
+│   ├── slhdsa_haraka_192f_simple.wasm
+│   ├── slhdsa_haraka_192s_robust.wasm
+│   ├── slhdsa_haraka_192s_simple.wasm
+│   ├── slhdsa_haraka_256f_robust.wasm
+│   ├── slhdsa_haraka_256f_simple.wasm
+│   ├── slhdsa_haraka_256s_robust.wasm
+│   ├── slhdsa_haraka_256s_simple.wasm
+│   ├── slhdsa_sha2_128f_avx2.wasm
+│   ├── slhdsa_sha2_192f_avx2.wasm
+│   ├── slhdsa_sha2_256f_avx2.wasm
+│   ├── slhdsa_sha256_128f_robust.wasm
+│   ├── slhdsa_sha256_128f_simple.wasm
+│   ├── slhdsa_sha256_128s_robust.wasm
+│   ├── slhdsa_sha256_128s_simple.wasm
+│   ├── slhdsa_sha256_192f_robust.wasm
+│   ├── slhdsa_sha256_192f_simple.wasm
+│   ├── slhdsa_sha256_192s_robust.wasm
+│   ├── slhdsa_sha256_192s_simple.wasm
+│   ├── slhdsa_sha256_256f_robust.wasm
+│   ├── slhdsa_sha256_256f_simple.wasm
+│   ├── slhdsa_sha256_256s_robust.wasm
+│   ├── slhdsa_sha256_256s_simple.wasm
+│   ├── slhdsa_shake256_128f_robust.wasm
+│   ├── slhdsa_shake256_128f_simple.wasm
+│   ├── slhdsa_shake256_128s_robust.wasm
+│   ├── slhdsa_shake256_128s_simple.wasm
+│   ├── slhdsa_shake256_192f_robust.wasm
+│   ├── slhdsa_shake256_192f_simple.wasm
+│   ├── slhdsa_shake256_192s_robust.wasm
+│   ├── slhdsa_shake256_192s_simple.wasm
+│   ├── slhdsa_shake256_256f_robust.wasm
+│   ├── slhdsa_shake256_256f_simple.wasm
+│   ├── slhdsa_shake256_256s_robust.wasm
+│   └── slhdsa_shake256_256s_simple.wasm
+├── clean
+│   ├── mlkem1024_clean.wasm
+│   ├── mlkem512_clean.wasm
+│   └── mlkem768_clean.wasm
+├── m4
+│   ├── falcon1024_m4.wasm
+│   └── falcon512_m4.wasm
+├── optimp
+│   ├── falcon1024_opt.wasm
+│   ├── falcon512_opt.wasm
+│   ├── hqc128_opt.wasm
+│   ├── hqc192_opt.wasm
+│   ├── hqc256_opt.wasm
+│   ├── mlkem1024_opt.wasm
+│   ├── mlkem512_opt.wasm
+│   ├── mlkem768_opt.wasm
+│   ├── slhdsa_sha2_128f_haraka_opt.wasm
+│   ├── slhdsa_sha2_128f_opt.wasm
+│   ├── slhdsa_sha2_128s_haraka_opt.wasm
+│   ├── slhdsa_sha2_128s_opt.wasm
+│   ├── slhdsa_sha2_192f_haraka_opt.wasm
+│   ├── slhdsa_sha2_192f_opt.wasm
+│   ├── slhdsa_sha2_192s_haraka_opt.wasm
+│   ├── slhdsa_sha2_192s_opt.wasm
+│   ├── slhdsa_sha2_256f_haraka_opt.wasm
+│   ├── slhdsa_sha2_256f_opt.wasm
+│   ├── slhdsa_sha2_256s_haraka_opt.wasm
+│   └── slhdsa_sha2_256s_opt.wasm
+├── refimp
+│   ├── falcon1024_ref.wasm
+│   ├── falcon512_ref.wasm
+│   ├── hqc128_ref.wasm
+│   ├── hqc192_ref.wasm
+│   ├── hqc256_ref.wasm
+│   ├── mldsa44_ref.wasm
+│   ├── mldsa65_ref.wasm
+│   ├── mldsa87_ref.wasm
+│   ├── mlkem1024_ref.wasm
+│   ├── mlkem512_ref.wasm
+│   ├── mlkem768_ref.wasm
+│   ├── slhdsa_sha2_128f_haraka_ref.wasm
+│   ├── slhdsa_sha2_128f_ref.wasm
+│   ├── slhdsa_sha2_128s_haraka_ref.wasm
+│   ├── slhdsa_sha2_128s_ref.wasm
+│   ├── slhdsa_sha2_192f_haraka_ref.wasm
+│   ├── slhdsa_sha2_192f_ref.wasm
+│   ├── slhdsa_sha2_192s_haraka_ref.wasm
+│   ├── slhdsa_sha2_192s_ref.wasm
+│   ├── slhdsa_sha2_256f_haraka_ref.wasm
+│   ├── slhdsa_sha2_256f_ref.wasm
+│   ├── slhdsa_sha2_256s_haraka_ref.wasm
+│   └── slhdsa_sha2_256s_ref.wasm
+└── tree.txt
+
+7 directories, 101 files

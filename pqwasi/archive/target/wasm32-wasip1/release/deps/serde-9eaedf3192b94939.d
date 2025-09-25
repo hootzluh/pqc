@@ -1,0 +1,14 @@
+/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/deps/serde-9eaedf3192b94939.d: /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/lib.rs /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/integer128.rs /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/mod.rs /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/de.rs /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/ser.rs /Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/serde-3a75400e10642edb/out/private.rs
+
+/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/deps/libserde-9eaedf3192b94939.rlib: /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/lib.rs /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/integer128.rs /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/mod.rs /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/de.rs /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/ser.rs /Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/serde-3a75400e10642edb/out/private.rs
+
+/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/deps/libserde-9eaedf3192b94939.rmeta: /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/lib.rs /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/integer128.rs /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/mod.rs /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/de.rs /Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/ser.rs /Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/serde-3a75400e10642edb/out/private.rs
+
+/Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/lib.rs:
+/Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/integer128.rs:
+/Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/mod.rs:
+/Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/de.rs:
+/Users/devpup/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.226/src/private/ser.rs:
+/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/serde-3a75400e10642edb/out/private.rs:
+
+# env-dep:OUT_DIR=/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/serde-3a75400e10642edb/out

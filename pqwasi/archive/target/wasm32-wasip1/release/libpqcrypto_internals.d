@@ -1,0 +1,1 @@
+/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/libpqcrypto_internals.rlib: /Users/devpup/Desktop/pqc/pqwasi/pqcrypto/pqcrypto-internals/build.rs /Users/devpup/Desktop/pqc/pqwasi/pqcrypto/pqcrypto-internals/cfiles/ /Users/devpup/Desktop/pqc/pqwasi/pqcrypto/pqcrypto-internals/src/ /Users/devpup/Desktop/pqc/pqwasi/pqcrypto/pqcrypto-internals/src/lib.rs

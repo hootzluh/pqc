@@ -1,0 +1,685 @@
+OUT_DIR = Some(/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out)
+OPT_LEVEL = Some(3)
+TARGET = Some(wasm32-wasip1)
+HOST = Some(aarch64-apple-darwin)
+cargo:rerun-if-env-changed=CC_wasm32-wasip1
+CC_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=CC_wasm32_wasip1
+CC_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_CC
+TARGET_CC = None
+cargo:rerun-if-env-changed=CC
+CC = Some(/Users/devpup/wasi-sysroot/bin/clang)
+RUSTC_WRAPPER = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=WASI_SYSROOT
+WASI_SYSROOT = None
+DEBUG = Some(false)
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=TARGET_CFLAGS
+TARGET_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32_wasip1
+CFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32-wasip1
+CFLAGS_wasm32-wasip1 = None
+CARGO_ENCODED_RUSTFLAGS = Some()
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:rerun-if-env-changed=AR_wasm32-wasip1
+AR_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=AR_wasm32_wasip1
+AR_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_AR
+TARGET_AR = None
+cargo:rerun-if-env-changed=AR
+AR = Some(/Users/devpup/wasi-sysroot/bin/ar)
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=TARGET_ARFLAGS
+TARGET_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32_wasip1
+ARFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32-wasip1
+ARFLAGS_wasm32-wasip1 = None
+cargo:rustc-link-lib=static=sphincs-shake-128f-simple_clean
+cargo:rustc-link-search=native=/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out
+OUT_DIR = Some(/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out)
+OPT_LEVEL = Some(3)
+TARGET = Some(wasm32-wasip1)
+HOST = Some(aarch64-apple-darwin)
+cargo:rerun-if-env-changed=CC_wasm32-wasip1
+CC_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=CC_wasm32_wasip1
+CC_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_CC
+TARGET_CC = None
+cargo:rerun-if-env-changed=CC
+CC = Some(/Users/devpup/wasi-sysroot/bin/clang)
+RUSTC_WRAPPER = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=WASI_SYSROOT
+WASI_SYSROOT = None
+DEBUG = Some(false)
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=TARGET_CFLAGS
+TARGET_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32_wasip1
+CFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32-wasip1
+CFLAGS_wasm32-wasip1 = None
+CARGO_ENCODED_RUSTFLAGS = Some()
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:rerun-if-env-changed=AR_wasm32-wasip1
+AR_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=AR_wasm32_wasip1
+AR_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_AR
+TARGET_AR = None
+cargo:rerun-if-env-changed=AR
+AR = Some(/Users/devpup/wasi-sysroot/bin/ar)
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=TARGET_ARFLAGS
+TARGET_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32_wasip1
+ARFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32-wasip1
+ARFLAGS_wasm32-wasip1 = None
+cargo:rustc-link-lib=static=sphincs-shake-128s-simple_clean
+cargo:rustc-link-search=native=/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out
+OUT_DIR = Some(/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out)
+OPT_LEVEL = Some(3)
+TARGET = Some(wasm32-wasip1)
+HOST = Some(aarch64-apple-darwin)
+cargo:rerun-if-env-changed=CC_wasm32-wasip1
+CC_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=CC_wasm32_wasip1
+CC_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_CC
+TARGET_CC = None
+cargo:rerun-if-env-changed=CC
+CC = Some(/Users/devpup/wasi-sysroot/bin/clang)
+RUSTC_WRAPPER = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=WASI_SYSROOT
+WASI_SYSROOT = None
+DEBUG = Some(false)
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=TARGET_CFLAGS
+TARGET_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32_wasip1
+CFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32-wasip1
+CFLAGS_wasm32-wasip1 = None
+CARGO_ENCODED_RUSTFLAGS = Some()
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:rerun-if-env-changed=AR_wasm32-wasip1
+AR_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=AR_wasm32_wasip1
+AR_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_AR
+TARGET_AR = None
+cargo:rerun-if-env-changed=AR
+AR = Some(/Users/devpup/wasi-sysroot/bin/ar)
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=TARGET_ARFLAGS
+TARGET_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32_wasip1
+ARFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32-wasip1
+ARFLAGS_wasm32-wasip1 = None
+cargo:rustc-link-lib=static=sphincs-shake-192f-simple_clean
+cargo:rustc-link-search=native=/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out
+OUT_DIR = Some(/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out)
+OPT_LEVEL = Some(3)
+TARGET = Some(wasm32-wasip1)
+HOST = Some(aarch64-apple-darwin)
+cargo:rerun-if-env-changed=CC_wasm32-wasip1
+CC_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=CC_wasm32_wasip1
+CC_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_CC
+TARGET_CC = None
+cargo:rerun-if-env-changed=CC
+CC = Some(/Users/devpup/wasi-sysroot/bin/clang)
+RUSTC_WRAPPER = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=WASI_SYSROOT
+WASI_SYSROOT = None
+DEBUG = Some(false)
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=TARGET_CFLAGS
+TARGET_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32_wasip1
+CFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32-wasip1
+CFLAGS_wasm32-wasip1 = None
+CARGO_ENCODED_RUSTFLAGS = Some()
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:rerun-if-env-changed=AR_wasm32-wasip1
+AR_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=AR_wasm32_wasip1
+AR_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_AR
+TARGET_AR = None
+cargo:rerun-if-env-changed=AR
+AR = Some(/Users/devpup/wasi-sysroot/bin/ar)
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=TARGET_ARFLAGS
+TARGET_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32_wasip1
+ARFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32-wasip1
+ARFLAGS_wasm32-wasip1 = None
+cargo:rustc-link-lib=static=sphincs-shake-192s-simple_clean
+cargo:rustc-link-search=native=/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out
+OUT_DIR = Some(/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out)
+OPT_LEVEL = Some(3)
+TARGET = Some(wasm32-wasip1)
+HOST = Some(aarch64-apple-darwin)
+cargo:rerun-if-env-changed=CC_wasm32-wasip1
+CC_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=CC_wasm32_wasip1
+CC_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_CC
+TARGET_CC = None
+cargo:rerun-if-env-changed=CC
+CC = Some(/Users/devpup/wasi-sysroot/bin/clang)
+RUSTC_WRAPPER = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=WASI_SYSROOT
+WASI_SYSROOT = None
+DEBUG = Some(false)
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=TARGET_CFLAGS
+TARGET_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32_wasip1
+CFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32-wasip1
+CFLAGS_wasm32-wasip1 = None
+CARGO_ENCODED_RUSTFLAGS = Some()
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:rerun-if-env-changed=AR_wasm32-wasip1
+AR_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=AR_wasm32_wasip1
+AR_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_AR
+TARGET_AR = None
+cargo:rerun-if-env-changed=AR
+AR = Some(/Users/devpup/wasi-sysroot/bin/ar)
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=TARGET_ARFLAGS
+TARGET_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32_wasip1
+ARFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32-wasip1
+ARFLAGS_wasm32-wasip1 = None
+cargo:rustc-link-lib=static=sphincs-shake-256f-simple_clean
+cargo:rustc-link-search=native=/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out
+OUT_DIR = Some(/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out)
+OPT_LEVEL = Some(3)
+TARGET = Some(wasm32-wasip1)
+HOST = Some(aarch64-apple-darwin)
+cargo:rerun-if-env-changed=CC_wasm32-wasip1
+CC_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=CC_wasm32_wasip1
+CC_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_CC
+TARGET_CC = None
+cargo:rerun-if-env-changed=CC
+CC = Some(/Users/devpup/wasi-sysroot/bin/clang)
+RUSTC_WRAPPER = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=WASI_SYSROOT
+WASI_SYSROOT = None
+DEBUG = Some(false)
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=TARGET_CFLAGS
+TARGET_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32_wasip1
+CFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32-wasip1
+CFLAGS_wasm32-wasip1 = None
+CARGO_ENCODED_RUSTFLAGS = Some()
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:rerun-if-env-changed=AR_wasm32-wasip1
+AR_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=AR_wasm32_wasip1
+AR_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_AR
+TARGET_AR = None
+cargo:rerun-if-env-changed=AR
+AR = Some(/Users/devpup/wasi-sysroot/bin/ar)
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=TARGET_ARFLAGS
+TARGET_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32_wasip1
+ARFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32-wasip1
+ARFLAGS_wasm32-wasip1 = None
+cargo:rustc-link-lib=static=sphincs-shake-256s-simple_clean
+cargo:rustc-link-search=native=/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out
+OUT_DIR = Some(/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out)
+OPT_LEVEL = Some(3)
+TARGET = Some(wasm32-wasip1)
+HOST = Some(aarch64-apple-darwin)
+cargo:rerun-if-env-changed=CC_wasm32-wasip1
+CC_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=CC_wasm32_wasip1
+CC_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_CC
+TARGET_CC = None
+cargo:rerun-if-env-changed=CC
+CC = Some(/Users/devpup/wasi-sysroot/bin/clang)
+RUSTC_WRAPPER = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=WASI_SYSROOT
+WASI_SYSROOT = None
+DEBUG = Some(false)
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=TARGET_CFLAGS
+TARGET_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32_wasip1
+CFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32-wasip1
+CFLAGS_wasm32-wasip1 = None
+CARGO_ENCODED_RUSTFLAGS = Some()
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:rerun-if-env-changed=AR_wasm32-wasip1
+AR_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=AR_wasm32_wasip1
+AR_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_AR
+TARGET_AR = None
+cargo:rerun-if-env-changed=AR
+AR = Some(/Users/devpup/wasi-sysroot/bin/ar)
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=TARGET_ARFLAGS
+TARGET_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32_wasip1
+ARFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32-wasip1
+ARFLAGS_wasm32-wasip1 = None
+cargo:rustc-link-lib=static=sphincs-sha2-128f-simple_clean
+cargo:rustc-link-search=native=/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out
+OUT_DIR = Some(/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out)
+OPT_LEVEL = Some(3)
+TARGET = Some(wasm32-wasip1)
+HOST = Some(aarch64-apple-darwin)
+cargo:rerun-if-env-changed=CC_wasm32-wasip1
+CC_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=CC_wasm32_wasip1
+CC_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_CC
+TARGET_CC = None
+cargo:rerun-if-env-changed=CC
+CC = Some(/Users/devpup/wasi-sysroot/bin/clang)
+RUSTC_WRAPPER = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=WASI_SYSROOT
+WASI_SYSROOT = None
+DEBUG = Some(false)
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=TARGET_CFLAGS
+TARGET_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32_wasip1
+CFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32-wasip1
+CFLAGS_wasm32-wasip1 = None
+CARGO_ENCODED_RUSTFLAGS = Some()
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:rerun-if-env-changed=AR_wasm32-wasip1
+AR_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=AR_wasm32_wasip1
+AR_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_AR
+TARGET_AR = None
+cargo:rerun-if-env-changed=AR
+AR = Some(/Users/devpup/wasi-sysroot/bin/ar)
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=TARGET_ARFLAGS
+TARGET_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32_wasip1
+ARFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32-wasip1
+ARFLAGS_wasm32-wasip1 = None
+cargo:rustc-link-lib=static=sphincs-sha2-128s-simple_clean
+cargo:rustc-link-search=native=/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out
+OUT_DIR = Some(/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out)
+OPT_LEVEL = Some(3)
+TARGET = Some(wasm32-wasip1)
+HOST = Some(aarch64-apple-darwin)
+cargo:rerun-if-env-changed=CC_wasm32-wasip1
+CC_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=CC_wasm32_wasip1
+CC_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_CC
+TARGET_CC = None
+cargo:rerun-if-env-changed=CC
+CC = Some(/Users/devpup/wasi-sysroot/bin/clang)
+RUSTC_WRAPPER = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=WASI_SYSROOT
+WASI_SYSROOT = None
+DEBUG = Some(false)
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=TARGET_CFLAGS
+TARGET_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32_wasip1
+CFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32-wasip1
+CFLAGS_wasm32-wasip1 = None
+CARGO_ENCODED_RUSTFLAGS = Some()
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:rerun-if-env-changed=AR_wasm32-wasip1
+AR_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=AR_wasm32_wasip1
+AR_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_AR
+TARGET_AR = None
+cargo:rerun-if-env-changed=AR
+AR = Some(/Users/devpup/wasi-sysroot/bin/ar)
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=TARGET_ARFLAGS
+TARGET_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32_wasip1
+ARFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32-wasip1
+ARFLAGS_wasm32-wasip1 = None
+cargo:rustc-link-lib=static=sphincs-sha2-192f-simple_clean
+cargo:rustc-link-search=native=/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out
+OUT_DIR = Some(/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out)
+OPT_LEVEL = Some(3)
+TARGET = Some(wasm32-wasip1)
+HOST = Some(aarch64-apple-darwin)
+cargo:rerun-if-env-changed=CC_wasm32-wasip1
+CC_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=CC_wasm32_wasip1
+CC_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_CC
+TARGET_CC = None
+cargo:rerun-if-env-changed=CC
+CC = Some(/Users/devpup/wasi-sysroot/bin/clang)
+RUSTC_WRAPPER = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=WASI_SYSROOT
+WASI_SYSROOT = None
+DEBUG = Some(false)
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=TARGET_CFLAGS
+TARGET_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32_wasip1
+CFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32-wasip1
+CFLAGS_wasm32-wasip1 = None
+CARGO_ENCODED_RUSTFLAGS = Some()
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:rerun-if-env-changed=AR_wasm32-wasip1
+AR_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=AR_wasm32_wasip1
+AR_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_AR
+TARGET_AR = None
+cargo:rerun-if-env-changed=AR
+AR = Some(/Users/devpup/wasi-sysroot/bin/ar)
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=TARGET_ARFLAGS
+TARGET_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32_wasip1
+ARFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32-wasip1
+ARFLAGS_wasm32-wasip1 = None
+cargo:rustc-link-lib=static=sphincs-sha2-192s-simple_clean
+cargo:rustc-link-search=native=/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out
+OUT_DIR = Some(/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out)
+OPT_LEVEL = Some(3)
+TARGET = Some(wasm32-wasip1)
+HOST = Some(aarch64-apple-darwin)
+cargo:rerun-if-env-changed=CC_wasm32-wasip1
+CC_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=CC_wasm32_wasip1
+CC_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_CC
+TARGET_CC = None
+cargo:rerun-if-env-changed=CC
+CC = Some(/Users/devpup/wasi-sysroot/bin/clang)
+RUSTC_WRAPPER = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=WASI_SYSROOT
+WASI_SYSROOT = None
+DEBUG = Some(false)
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=TARGET_CFLAGS
+TARGET_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32_wasip1
+CFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32-wasip1
+CFLAGS_wasm32-wasip1 = None
+CARGO_ENCODED_RUSTFLAGS = Some()
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:rerun-if-env-changed=AR_wasm32-wasip1
+AR_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=AR_wasm32_wasip1
+AR_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_AR
+TARGET_AR = None
+cargo:rerun-if-env-changed=AR
+AR = Some(/Users/devpup/wasi-sysroot/bin/ar)
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=TARGET_ARFLAGS
+TARGET_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32_wasip1
+ARFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32-wasip1
+ARFLAGS_wasm32-wasip1 = None
+cargo:rustc-link-lib=static=sphincs-sha2-256f-simple_clean
+cargo:rustc-link-search=native=/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out
+OUT_DIR = Some(/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out)
+OPT_LEVEL = Some(3)
+TARGET = Some(wasm32-wasip1)
+HOST = Some(aarch64-apple-darwin)
+cargo:rerun-if-env-changed=CC_wasm32-wasip1
+CC_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=CC_wasm32_wasip1
+CC_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_CC
+TARGET_CC = None
+cargo:rerun-if-env-changed=CC
+CC = Some(/Users/devpup/wasi-sysroot/bin/clang)
+RUSTC_WRAPPER = None
+cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+CRATE_CC_NO_DEFAULTS = None
+cargo:rerun-if-env-changed=WASI_SYSROOT
+WASI_SYSROOT = None
+DEBUG = Some(false)
+cargo:rerun-if-env-changed=CFLAGS
+CFLAGS = None
+cargo:rerun-if-env-changed=TARGET_CFLAGS
+TARGET_CFLAGS = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32_wasip1
+CFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=CFLAGS_wasm32-wasip1
+CFLAGS_wasm32-wasip1 = None
+CARGO_ENCODED_RUSTFLAGS = Some()
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+exit status: 0
+cargo:rerun-if-env-changed=AR_wasm32-wasip1
+AR_wasm32-wasip1 = None
+cargo:rerun-if-env-changed=AR_wasm32_wasip1
+AR_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=TARGET_AR
+TARGET_AR = None
+cargo:rerun-if-env-changed=AR
+AR = Some(/Users/devpup/wasi-sysroot/bin/ar)
+cargo:rerun-if-env-changed=ARFLAGS
+ARFLAGS = None
+cargo:rerun-if-env-changed=TARGET_ARFLAGS
+TARGET_ARFLAGS = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32_wasip1
+ARFLAGS_wasm32_wasip1 = None
+cargo:rerun-if-env-changed=ARFLAGS_wasm32-wasip1
+ARFLAGS_wasm32-wasip1 = None
+cargo:rustc-link-lib=static=sphincs-sha2-256s-simple_clean
+cargo:rustc-link-search=native=/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/build/pqcrypto-sphincsplus-6b1d553cf3b72ca2/out
+cargo::rustc-check-cfg=cfg(enable_x86_avx2)

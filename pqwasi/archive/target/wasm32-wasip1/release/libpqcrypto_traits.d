@@ -1,0 +1,1 @@
+/Users/devpup/Desktop/pqc/pqwasi/pqcrypto/target/wasm32-wasip1/release/libpqcrypto_traits.rlib: /Users/devpup/Desktop/pqc/pqwasi/pqcrypto/pqcrypto-traits/src/kem.rs /Users/devpup/Desktop/pqc/pqwasi/pqcrypto/pqcrypto-traits/src/lib.rs /Users/devpup/Desktop/pqc/pqwasi/pqcrypto/pqcrypto-traits/src/sign.rs

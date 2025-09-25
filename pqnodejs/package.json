@@ -1,0 +1,10 @@
+{
+  "name": "aegis-nodejs-wasm",
+  "version": "0.1.0",
+  "description": "AEGIS Node.js WASM implementations - CommonJS compatible",
+  "main": "index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

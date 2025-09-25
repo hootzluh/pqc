@@ -1,0 +1,33 @@
+[package]
+name = "pqcrypto"
+description = "Post-Quantum cryptographic primitives"
+readme = "README.md"
+version = "0.18.1"
+authors = ["Thom Wiggers <thom@thomwiggers.nl>"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+homepage = "https://github.com/rustpq/"
+repository = "https://github.com/rustpq/pqcrypto/"
+keywords = ["cryptography", "post-quantum", "security"]
+categories = ["cryptography"]
+
+[dependencies]
+pqcrypto-traits = { path = "../pqcrypto-traits", version = "0.3.5" }
+pqcrypto-mlkem = { path = "../pqcrypto-mlkem", version = "0.1.1", optional = true }
+pqcrypto-classicmceliece = { path = "../pqcrypto-classicmceliece", version = "0.2.1", optional = true }
+pqcrypto-hqc = { path = "../pqcrypto-hqc", version = "0.2.2", optional = true }
+pqcrypto-mldsa = { path = "../pqcrypto-mldsa", version = "0.1.2", optional = true }
+pqcrypto-falcon = { path = "../pqcrypto-falcon", version = "0.4.1", optional = true }
+pqcrypto-sphincsplus = { path = "../pqcrypto-sphincsplus", version = "0.7.2", optional = true }
+
+[features]
+default = ["pqcrypto-mlkem","pqcrypto-classicmceliece","pqcrypto-hqc","pqcrypto-mldsa","pqcrypto-falcon","pqcrypto-sphincsplus",]
+cryptographically-insecure = []
+serialization = ["pqcrypto-mlkem/serialization","pqcrypto-classicmceliece/serialization","pqcrypto-hqc/serialization","pqcrypto-mldsa/serialization","pqcrypto-falcon/serialization","pqcrypto-sphincsplus/serialization",]
+
+[badges]
+travis-ci = { repository = "rustpq/pqcrypto", branch = "master" }
+maintenance = { status = "actively-developed" }
+
+[package.metadata.docs.rs]
+all-features = true
