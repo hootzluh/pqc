@@ -8,11 +8,11 @@
 
 [X] 04. pqwasi/ → WASI runtimes (serverless/edge).
 
-[X] 05. pqmobile/ → iOS/Android cross-compiled builds.
+[⏳] 05. pqmobile/ → iOS/Android cross-compiled builds. [FRAMEWORK: Build scripts and directory structure created, placeholder artifacts only]
 
-[X] 06. pqwear/ → Wearable devices (smart watches, rings, fitness trackers) - lightweight implementations for resource-constrained devices.
+[⏳] 06. pqwear/ → Wearable devices (smart watches, rings, fitness trackers) - lightweight implementations for resource-constrained devices. [FRAMEWORK: Build scripts and directory structure created, placeholder artifacts only]
 
-[ ] 07. pqplatform/ → Smart TV and smart home platforms (tvOS, Android TV, Google Home/Assistant, Apple HomePod/HomeOS).
+[⏳] 07. pqplatform/ → Smart TV and smart home platforms (tvOS, Android TV, Google Home/Assistant, Apple HomePod/HomeOS). [FRAMEWORK: Build scripts and directory structure created, placeholder artifacts only]
 
 [ ] 08. pqspatial/ → Spatial computing platforms (AR/VR/MR) - real-time optimized for spatial computing with Vision Pro, Meta Quest, etc. 
 
