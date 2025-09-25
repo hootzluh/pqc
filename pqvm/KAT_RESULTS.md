@@ -12,3 +12,7 @@ This file will summarize pass/fail per algorithm/variant after KAT runs.
 [ML-KEM] 20250925-033007 summary: {"mlkem_passed": [], "mlkem_failed": ["kyber512", "kyber768", "kyber1024"], "timestamp": "20250925-033007"}
 
 [ML-KEM] 20250925-035509 summary: {"mlkem_passed": [], "mlkem_failed": [], "timestamp": "20250925-035509"}
+
+[ML-KEM] 20250925-041909 summary: {"mlkem_passed": [], "mlkem_failed": ["mlkem512", "mlkem768", "mlkem1024"], "timestamp": "20250925-041909"}
+
+[ML-KEM] 20250925-041931 summary: {"mlkem_passed": [], "mlkem_failed": ["mlkem512", "mlkem768", "mlkem1024"], "timestamp": "20250925-041931"}

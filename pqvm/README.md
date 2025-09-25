@@ -2,11 +2,11 @@ pqvm — Post-Quantum Cryptography for Blockchain/VM Targets
 
 Overview
 - Targets: Substrate (WASM runtime pallet and host functions), CosmWasm contracts, EVM precompiles, Move bindings.
-- Algorithms: ML-KEM (Kyber), ML-DSA (Dilithium), SLH-DSA (SPHINCS+), FN-DSA (Falcon), HQC-KEM, Classic McEliece — all NIST parameter variants.
+- Algorithms: ML-KEM (Kyber), ML-DSA (Dilithium), FN-DSA (Falcon), HQC-KEM — NIST parameter variants. (Classic McEliece omitted due to memory constraints in blockchain environments)
 - Isolation: All sources copied-in under pqvm/; no runtime dependency on paths outside pqvm/.
 
 Build order
-- Per user request: pqvm first, then pqno_std.
+- Per user request: pqvm first, then pqnostd.
 
 Structure
 - substrate/pallet: FRAME pallet and wasm blob(s)

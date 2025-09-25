@@ -1,0 +1,3 @@
+[env]
+# Classic McEliece requires a large stack for tests
+RUST_MIN_STACK = "800000000"

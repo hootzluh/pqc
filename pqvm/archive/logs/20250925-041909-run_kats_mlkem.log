@@ -1,0 +1,16 @@
+pqvm KAT runner starting (ML-KEM only)...
+running: cargo run -q -p mlkem_host_cli -- --variant mlkem512 --rsp /Users/devpup/Desktop/pqc/pqkat/NIST-ml-kem/KAT/kyber512/PQCkemKAT_1632.rsp (cwd=/Users/devpup/Desktop/pqc/pqvm)
+mlkem512: exit_code=1
+running: cargo run -q -p mlkem_host_cli -- --variant mlkem768 --rsp /Users/devpup/Desktop/pqc/pqkat/NIST-ml-kem/KAT/kyber768/PQCkemKAT_2400.rsp (cwd=/Users/devpup/Desktop/pqc/pqvm)
+mlkem768: exit_code=1
+running: cargo run -q -p mlkem_host_cli -- --variant mlkem1024 --rsp /Users/devpup/Desktop/pqc/pqkat/NIST-ml-kem/KAT/kyber1024/PQCkemKAT_3168.rsp (cwd=/Users/devpup/Desktop/pqc/pqvm)
+mlkem1024: exit_code=1
+{
+  "mlkem_passed": [],
+  "mlkem_failed": [
+    "mlkem512",
+    "mlkem768",
+    "mlkem1024"
+  ],
+  "timestamp": "20250925-041909"
+}

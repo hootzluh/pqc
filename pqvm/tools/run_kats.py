@@ -23,11 +23,11 @@ def log(msg: str):
     print(msg)
 
 def run_mlkem():
-    kat_root = ROOT.parent / "pqkat" / "NIST-ml-kem-fips203" / "KAT"
+    kat_root = ROOT.parent / "pqkat" / "NIST-ml-kem" / "KAT"
     variants = {
-        "mlkem512": kat_root / "mlkem512" / "PQCkemKAT_1632.rsp",
-        "mlkem768": kat_root / "mlkem768" / "PQCkemKAT_2400.rsp",
-        "mlkem1024": kat_root / "mlkem1024" / "PQCkemKAT_3168.rsp",
+        "mlkem512": kat_root / "kyber512" / "PQCkemKAT_1632.rsp",
+        "mlkem768": kat_root / "kyber768" / "PQCkemKAT_2400.rsp",
+        "mlkem1024": kat_root / "kyber1024" / "PQCkemKAT_3168.rsp",
     }
     results = {}
     for variant, rsp in variants.items():
